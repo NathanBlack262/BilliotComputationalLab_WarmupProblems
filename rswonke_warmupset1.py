@@ -5,14 +5,13 @@ def circle_area(radius):
     '''
     Returns the area of a circle, given its radius. Use math.pi to represent pi.
     '''
-    pass
+    return math.pi * radius**2
 
 def square_side(perimeter):
     '''
     Returns the side of a square, given its perimeter.
     '''
     pass
-
 def rectangle_area(length,width):
     '''
     Returns the area of a rectangle, given its length and width.
