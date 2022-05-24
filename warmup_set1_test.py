@@ -1,7 +1,7 @@
 import unittest
 import math
 
-filename = "nblack_warmupset1.py"
+filename = "nblack_warmupset1"
 target = __import__(filename)
 
 circle_area = target.circle_area
@@ -47,8 +47,8 @@ class Test_WarmupSet1(unittest.TestCase):
         result2 = rectangle_perimeter(10,4.9)
         result3 = rectangle_perimeter(6.8,7.2)
         self.assertAlmostEqual(result1, 2*(3+4))
-        self.assertAlmostEqual(result2, 2*(10*4.9))
-        self.assertAlmostEqual(result3, 2*(6.8*7.2))
+        self.assertAlmostEqual(result2, 2*(10+4.9))
+        self.assertAlmostEqual(result3, 2*(6.8+7.2))
 
     def test_distance(self):
         result1 = distance(0,0,5,12)
@@ -56,7 +56,7 @@ class Test_WarmupSet1(unittest.TestCase):
         result3 = distance(2,9,10,24)
         self.assertAlmostEqual(result1, math.sqrt((12-0)**2 + (5-0)**2))
         self.assertAlmostEqual(result2, math.sqrt((4-0)**2 + (3-0)**2))
-        self.assertAlmostEqual(result3, math.sqrt((24-9)**2 + (9-2)**2))
+        self.assertAlmostEqual(result3, math.sqrt((24-9)**2 + (10-2)**2))
 
     def test_heavier_than_fluorine(self):
         result1 = heavier_than_fluorine(14)
@@ -99,5 +99,6 @@ class Test_WarmupSet1(unittest.TestCase):
         self.assertAlmostEqual(result3, True)
 
 
-
+if __name__ == "__main__":
+    unittest.main()
 
